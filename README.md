@@ -53,7 +53,7 @@ PORT=3333
 ### 4. Execute as migrations
 
 ```bash
-npx drizzle-kit push
+npx drizzle-kit migrate
 ```
 
 ### 5. Inicie o servidor de desenvolvimento
