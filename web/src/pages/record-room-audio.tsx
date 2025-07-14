@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
 import { useRef, useState } from "react";
-import { Navigate, useParams } from "react-router-dom";
+import { Link, Navigate, useParams } from "react-router-dom";
 
 const isRecordingSupported =
 	!!navigator.mediaDevices &&
@@ -97,6 +98,17 @@ export function RecordRoomAudio() {
 	}
 
 	return (
+		<div>
+		<div className="mb-4 flex items-center justify-between mt-4 ml-4">
+						<Link to={`/room/${params.roomId}`}>
+							<Button variant="outline">
+								<ArrowLeft className="mr-2 size-4" />
+								Voltar a Sala de perguntas
+							</Button>
+						</Link>
+						
+					</div>
+
 		<div className="gap-3 flex-col h-screen flex items-center justify-center">
 			{isRecording ? (
 				<Button onClick={stopRecording}>Parar gravação</Button>
@@ -104,6 +116,7 @@ export function RecordRoomAudio() {
 				<Button onClick={startRecording}>Gravar áudio</Button>
 			)}
 			{isRecording ? <p>Gravando ...</p> : <p>Pausado</p>}
+		</div>
 		</div>
 	);
 }

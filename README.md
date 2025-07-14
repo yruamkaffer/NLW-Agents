@@ -1,4 +1,4 @@
-# Let Me Ask
+# NLW Agents - Rocketseat
 
 Projeto desenvolvido durante a trilha Node.js do evento **Next Level Week (NLW)** promovido pela [Rocketseat](https://www.rocketseat.com.br/), com o objetivo de construir uma API REST moderna com autenticação, banco de dados e boas práticas de desenvolvimento backend.
 
